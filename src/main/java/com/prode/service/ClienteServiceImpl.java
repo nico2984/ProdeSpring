@@ -5,10 +5,11 @@ import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
+
+import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.prode.model.Cliente;
-
 
 @Transactional
 public class ClienteServiceImpl implements ClienteService {

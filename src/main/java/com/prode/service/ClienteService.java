@@ -2,10 +2,13 @@ package com.prode.service;
 
 import java.util.List;
 
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
+
 import com.prode.model.Cliente;
 
 
-
+@Component
 public interface ClienteService {
     public List<Cliente> findAll();
 
