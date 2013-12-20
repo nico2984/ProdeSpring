@@ -5,6 +5,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import com.prode.model.Cliente;
 import com.prode.service.ClienteService;
 
 
@@ -16,8 +17,8 @@ public class LoginController {
 	
 	@RequestMapping(value = "/login", method = RequestMethod.GET)
 	public String login(){
-		//test hibernate
-		System.out.println(clienteService.findAll());
+		
+		
 		return "login";
 	}
 }
