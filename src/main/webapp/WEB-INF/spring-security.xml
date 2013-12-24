@@ -13,11 +13,7 @@
 	</http>
 
 	<authentication-manager>
-		<authentication-provider>
-			<user-service>
-				<user name="mkyong" password="123456" authorities="ROLE_USER" />
-			</user-service>
-		</authentication-provider>
+		<authentication-provider user-service-ref="customUserDetailsService" />
 	</authentication-manager>
 
 </beans:beans>

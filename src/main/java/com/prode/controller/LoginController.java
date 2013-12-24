@@ -13,9 +13,6 @@ import com.prode.service.ClienteService;
 @Controller
 public class LoginController {
 
-	@Autowired
-	private ClienteService clienteService;
-
 	@RequestMapping(value = "/welcome", method = RequestMethod.GET)
 	public String printWelcome(ModelMap model, Principal principal) {
 
