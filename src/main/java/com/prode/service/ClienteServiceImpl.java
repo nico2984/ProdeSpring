@@ -12,27 +12,51 @@ import com.prode.model.Cliente;
 @Service
 public class ClienteServiceImpl implements ClienteService {
 
-	@Autowired
-	private ClienteDAO clienteDAO;
-
-	@Transactional
+	@Override
 	public void insertCliente(Cliente cliente) {
-		clienteDAO.insertCliente(cliente);
+		// TODO Auto-generated method stub
+		
 	}
 
-	@Transactional
+	@Override
 	public Cliente getClienteById(int userId) {
-		return clienteDAO.getClienteById(userId);
+		// TODO Auto-generated method stub
+		return null;
 	}
 
-	@Transactional
+	@Override
 	public Cliente getCliente(String username) {
-		return clienteDAO.getCliente(username);
+		// TODO Auto-generated method stub
+		return null;
 	}
 
-	@Transactional
+	@Override
 	public List<Cliente> getClientes() {
-		return clienteDAO.getClientes();
+		// TODO Auto-generated method stub
+		return null;
 	}
+
+//	@Autowired
+//	private ClienteDAO clienteDAO;
+//
+//	@Transactional
+//	public void insertCliente(Cliente cliente) {
+//		clienteDAO.insertCliente(cliente);
+//	}
+//
+//	@Transactional
+//	public Cliente getClienteById(int userId) {
+//		return clienteDAO.getClienteById(userId);
+//	}
+//
+//	@Transactional
+//	public Cliente getCliente(String username) {
+//		return clienteDAO.getCliente(username);
+//	}
+//
+//	@Transactional
+//	public List<Cliente> getClientes() {
+//		return clienteDAO.getClientes();
+//	}
 
 }

@@ -15,6 +15,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.prode.dao.UserDAO;
+import com.prode.model.Role;
 
 @Service
 @Transactional(readOnly = true)
@@ -32,6 +33,12 @@ public class CustomUserDetailsService implements UserDetailsService {
 		boolean accountNonExpired = true;
 		boolean credentialsNonExpired = true;
 		boolean accountNonLocked = true;
+		
+		if (domainUser.getRole()==null) {
+			Role role = new Role();
+			role.setId(1);
+			domainUser.setRole(role);
+		}
 
 		return new User(domainUser.getLogin(), domainUser.getPassword(),
 				enabled, accountNonExpired, credentialsNonExpired,
